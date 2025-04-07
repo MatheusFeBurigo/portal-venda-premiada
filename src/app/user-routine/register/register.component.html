@@ -1,0 +1,90 @@
+<body>
+    <div class="center-box">
+      <img src="../../../assets/resources/gtslogologin.png" alt="Logo gts" class="logo-register">
+      <h2>Cadastre-se</h2>
+
+      <po-page-default>
+          <po-container p-title="Dados do Usuário">
+              <form #registerForm="ngForm">
+                  <div class="po-row">
+                      <po-input class="po-lg-9 po-md-8 po-sm-12" 
+                                name="nome" 
+                                p-label="Nome" 
+                                p-required
+                                p-placeholder="Digite seu nome"
+                                [(ngModel)]="user.nome">
+                      </po-input>
+
+                      <po-input class="po-lg-6 po-md-6 po-sm-12" 
+                                name="revenda" 
+                                p-label="Nome da revenda" 
+                                p-required
+                                p-placeholder="Digite o nome da sua revenda"
+                                [(ngModel)]="user.revenda">
+                      </po-input>
+                  </div>
+
+                  <div class="po-row">
+                      <po-input class="po-lg-12" 
+                                name="email" 
+                                p-label="E-mail" 
+                                p-type="email" 
+                                p-required
+                                p-placeholder="Digite seu e-mail"
+                                [(ngModel)]="user.email">
+                      </po-input>
+                  </div>
+
+                  <div class="po-row">
+                      <po-password class="po-lg-6" 
+                                   name="password" 
+                                   p-label="Senha" 
+                                   p-required 
+                                   p-placeholder="Digite sua senha"
+                                   [(ngModel)]="user.password">
+                      </po-password>
+
+                      <po-password class="po-lg-6" 
+                                   name="confirmarSenha" 
+                                   p-label="Confirmar Senha" 
+                                   p-required
+                                   p-placeholder="Confirme sua senha">
+                      </po-password>
+                  </div>
+
+                  <div class="po-row">
+                      <po-upload class="po-lg-3 po-md-6 po-sm-12" 
+                                 name="file" 
+                                 [p-required]="userImageRequired"
+                                 p-url="http://localhost:3000/image-revenda/upload-revenda"
+                                 p-label="Comprovante de vínculo">
+                      </po-upload>
+
+                      <po-upload class="po-lg-3 po-md-4 po-sm-12" 
+                                 name="file" 
+                                 [p-required]="revendaImageRequired"
+                                 p-label="Foto"
+                                 p-url="http://localhost:3000/images/upload">
+                      </po-upload>
+                  </div>
+              </form>
+          </po-container>
+      </po-page-default>
+
+      <div class="po-button-container">
+          <po-button 
+            class="po-lg-3 po-md-4 po-sm-12" 
+            p-label="Registrar"
+            (p-click)="register()"
+            [p-disabled]="!registerForm.form.valid">
+          </po-button>
+          
+          <po-button 
+              class="po-lg-3 po-md-4 po-sm-12" 
+              p-label="Fazer login" 
+              p-type="button" 
+              (p-click)="goToLogin()">
+          </po-button>
+      </div>
+    </div>
+</body>

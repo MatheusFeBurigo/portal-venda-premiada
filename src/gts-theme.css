@@ -1,0 +1,30 @@
+:root {
+    --color-primary-light-95: #db8034;
+
+    /* Borda inferior da Table Header */
+    --color-primary-light-80: #db8034;
+
+    /* Scroll (opacidade de 50%) */
+    --color-primary-alpha-50: #db8034;
+
+    /* Botão primário, Links, Cor da borda do input selecionado, Cor da borda do botão secundário */
+    --color-primary: #db8034;
+
+    /* Hover do Botão primário, Links, Cor da borda do botão secundário */
+    --color-primary-dark-20: #db8034;
+
+    /* Pressed do Botão primário, Links, Cor da borda do botão secundário */
+    --color-primary-dark-40: #db8034;
+
+    /* Secondary */
+    --color-secondary: #000000;
+
+    --color-secondary-dark-20: #000000;
+
+    --color-secondary-dark-40: #000000;
+
+    /* Overlay de Modal e Menu (70% de opacidade) */
+    --color-secondary-dark-60-alpha-70: #000000;
+
+    --color-secondary-dark-60: #000000;
+  }

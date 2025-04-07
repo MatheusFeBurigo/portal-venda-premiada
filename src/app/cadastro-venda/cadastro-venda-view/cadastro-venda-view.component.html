@@ -1,0 +1,16 @@
+<div class="po-wrapper">
+    <po-page-dynamic-search
+        p-title="Pedidos de compra"
+        [p-filters]="filters">
+        <div style="text-align: right;">
+            <po-button p-label="Nova Solicitação" [hidden]="isHideButton" p-icon="po-icon po-icon-plus" [p-small]="true" (p-click)="criarCompra()"></po-button>
+        </div>
+
+        <div id="print-section" style="margin-bottom: 20px; margin-top: 20px;">
+            <po-table
+                [p-columns]="columns"
+                p-sortable>
+            </po-table>
+        </div>
+    </po-page-dynamic-search>
+<div>
